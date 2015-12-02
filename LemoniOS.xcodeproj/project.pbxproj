@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72A37AAF1C0EA2AA0098CD18 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37A9D1C0EA2AA0098CD18 /* ContactsViewController.swift */; };
+		72A37AB01C0EA2AA0098CD18 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37AA01C0EA2AA0098CD18 /* DiscoverViewController.swift */; };
+		72A37AB11C0EA2AA0098CD18 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37AA31C0EA2AA0098CD18 /* TabBarViewController.swift */; };
+		72A37AB21C0EA2AA0098CD18 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37AA61C0EA2AA0098CD18 /* MeViewController.swift */; };
+		72A37AB31C0EA2AA0098CD18 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37AA91C0EA2AA0098CD18 /* MessagesViewController.swift */; };
+		72A37AB41C0EA2AA0098CD18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A37AAB1C0EA2AA0098CD18 /* LaunchScreen.xib */; };
+		72A37AB51C0EA2AA0098CD18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A37AAD1C0EA2AA0098CD18 /* Images.xcassets */; };
+		72A37ABA1C0EA3040098CD18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37AB91C0EA3040098CD18 /* AppDelegate.swift */; };
+		72A37ABF1C0EA36B0098CD18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72A37ABC1C0EA36B0098CD18 /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72EB3D031AC2E4D6004F32E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72EB3CE51AC2E4D6004F32E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72EB3CEC1AC2E4D6004F32E5;
+			remoteInfo = "lemon-oa-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		72A37A9D1C0EA2AA0098CD18 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		72A37AA01C0EA2AA0098CD18 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		72A37AA31C0EA2AA0098CD18 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		72A37AA61C0EA2AA0098CD18 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		72A37AA91C0EA2AA0098CD18 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		72A37AAC1C0EA2AA0098CD18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		72A37AAD1C0EA2AA0098CD18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		72A37AAE1C0EA2AA0098CD18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A37AB71C0EA2F60098CD18 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		72A37AB91C0EA3040098CD18 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		72A37ABC1C0EA36B0098CD18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72EB3CED1AC2E4D6004F32E5 /* LemoniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemoniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72EB3D021AC2E4D6004F32E5 /* LemoniOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemoniOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72EB3CEA1AC2E4D6004F32E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72EB3CFF1AC2E4D6004F32E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72A37A9A1C0EA2AA0098CD18 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				72A37A9B1C0EA2AA0098CD18 /* Contacts */,
+				72A37A9E1C0EA2AA0098CD18 /* Discover */,
+				72A37AA11C0EA2AA0098CD18 /* Main */,
+				72A37AA41C0EA2AA0098CD18 /* Me */,
+				72A37AA71C0EA2AA0098CD18 /* Messages */,
+			);
+			name = Classes;
+			path = LemoniOS/Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		72A37A9B1C0EA2AA0098CD18 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				72A37A9C1C0EA2AA0098CD18 /* ViewControllers */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		72A37A9C1C0EA2AA0098CD18 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72A37A9D1C0EA2AA0098CD18 /* ContactsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72A37A9E1C0EA2AA0098CD18 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AB71C0EA2F60098CD18 /* AppDelegate.swift */,
+				72A37A9F1C0EA2AA0098CD18 /* ViewControllers */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		72A37A9F1C0EA2AA0098CD18 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AA01C0EA2AA0098CD18 /* DiscoverViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72A37AA11C0EA2AA0098CD18 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AB91C0EA3040098CD18 /* AppDelegate.swift */,
+				72A37AA21C0EA2AA0098CD18 /* ViewControllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		72A37AA21C0EA2AA0098CD18 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AA31C0EA2AA0098CD18 /* TabBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72A37AA41C0EA2AA0098CD18 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AA51C0EA2AA0098CD18 /* ViewControllers */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		72A37AA51C0EA2AA0098CD18 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AA61C0EA2AA0098CD18 /* MeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72A37AA71C0EA2AA0098CD18 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AA81C0EA2AA0098CD18 /* ViewControllers */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		72A37AA81C0EA2AA0098CD18 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AA91C0EA2AA0098CD18 /* MessagesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72A37AAA1C0EA2AA0098CD18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72A37AAB1C0EA2AA0098CD18 /* LaunchScreen.xib */,
+				72A37AAD1C0EA2AA0098CD18 /* Images.xcassets */,
+				72A37AAE1C0EA2AA0098CD18 /* Info.plist */,
+			);
+			name = Resources;
+			path = LemoniOS/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		72A37ABB1C0EA36B0098CD18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72A37ABC1C0EA36B0098CD18 /* Info.plist */,
+			);
+			name = Resources;
+			path = LemoniOSTests/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		72A37ABD1C0EA36B0098CD18 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			path = LemoniOSTests/Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		72EB3CE41AC2E4D6004F32E5 = {
+			isa = PBXGroup;
+			children = (
+				72EB3CEF1AC2E4D6004F32E5 /* LemoniOS */,
+				72EB3D051AC2E4D6004F32E5 /* LemoniOSTests */,
+				72EB3CEE1AC2E4D6004F32E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72EB3CEE1AC2E4D6004F32E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72EB3CED1AC2E4D6004F32E5 /* LemoniOS.app */,
+				72EB3D021AC2E4D6004F32E5 /* LemoniOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72EB3CEF1AC2E4D6004F32E5 /* LemoniOS */ = {
+			isa = PBXGroup;
+			children = (
+				72A37A9A1C0EA2AA0098CD18 /* Classes */,
+				72A37AAA1C0EA2AA0098CD18 /* Resources */,
+			);
+			path = LemoniOS;
+			sourceTree = "<group>";
+		};
+		72EB3D051AC2E4D6004F32E5 /* LemoniOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				72A37ABD1C0EA36B0098CD18 /* Classes */,
+				72A37ABB1C0EA36B0098CD18 /* Resources */,
+			);
+			name = LemoniOSTests;
+			path = "lemon-oa-iosTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72EB3CEC1AC2E4D6004F32E5 /* LemoniOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72EB3D0C1AC2E4D6004F32E5 /* Build configuration list for PBXNativeTarget "LemoniOS" */;
+			buildPhases = (
+				72EB3CE91AC2E4D6004F32E5 /* Sources */,
+				72EB3CEA1AC2E4D6004F32E5 /* Frameworks */,
+				72EB3CEB1AC2E4D6004F32E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LemoniOS;
+			productName = "lemon-oa-ios";
+			productReference = 72EB3CED1AC2E4D6004F32E5 /* LemoniOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72EB3D011AC2E4D6004F32E5 /* LemoniOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72EB3D0F1AC2E4D6004F32E5 /* Build configuration list for PBXNativeTarget "LemoniOSTests" */;
+			buildPhases = (
+				72EB3CFE1AC2E4D6004F32E5 /* Sources */,
+				72EB3CFF1AC2E4D6004F32E5 /* Frameworks */,
+				72EB3D001AC2E4D6004F32E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72EB3D041AC2E4D6004F32E5 /* PBXTargetDependency */,
+			);
+			name = LemoniOSTests;
+			productName = "lemon-oa-iosTests";
+			productReference = 72EB3D021AC2E4D6004F32E5 /* LemoniOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72EB3CE51AC2E4D6004F32E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "三只小猪";
+				TargetAttributes = {
+					72EB3CEC1AC2E4D6004F32E5 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					72EB3D011AC2E4D6004F32E5 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 72EB3CEC1AC2E4D6004F32E5;
+					};
+				};
+			};
+			buildConfigurationList = 72EB3CE81AC2E4D6004F32E5 /* Build configuration list for PBXProject "LemoniOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72EB3CE41AC2E4D6004F32E5;
+			productRefGroup = 72EB3CEE1AC2E4D6004F32E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72EB3CEC1AC2E4D6004F32E5 /* LemoniOS */,
+				72EB3D011AC2E4D6004F32E5 /* LemoniOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72EB3CEB1AC2E4D6004F32E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A37ABF1C0EA36B0098CD18 /* Info.plist in Resources */,
+				72A37AB41C0EA2AA0098CD18 /* LaunchScreen.xib in Resources */,
+				72A37AB51C0EA2AA0098CD18 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72EB3D001AC2E4D6004F32E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72EB3CE91AC2E4D6004F32E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A37AB31C0EA2AA0098CD18 /* MessagesViewController.swift in Sources */,
+				72A37AAF1C0EA2AA0098CD18 /* ContactsViewController.swift in Sources */,
+				72A37AB11C0EA2AA0098CD18 /* TabBarViewController.swift in Sources */,
+				72A37ABA1C0EA3040098CD18 /* AppDelegate.swift in Sources */,
+				72A37AB21C0EA2AA0098CD18 /* MeViewController.swift in Sources */,
+				72A37AB01C0EA2AA0098CD18 /* DiscoverViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72EB3CFE1AC2E4D6004F32E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72EB3D041AC2E4D6004F32E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72EB3CEC1AC2E4D6004F32E5 /* LemoniOS */;
+			targetProxy = 72EB3D031AC2E4D6004F32E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72A37AAB1C0EA2AA0098CD18 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72A37AAC1C0EA2AA0098CD18 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72EB3D0A1AC2E4D6004F32E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		72EB3D0B1AC2E4D6004F32E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72EB3D0D1AC2E4D6004F32E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/LemoniOS/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mossle.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = LemoniOS;
+			};
+			name = Debug;
+		};
+		72EB3D0E1AC2E4D6004F32E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/LemoniOS/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mossle.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = LemoniOS;
+			};
+			name = Release;
+		};
+		72EB3D101AC2E4D6004F32E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "lemon-oa-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = LemoniOS;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LemoniOS.app/LemoniOS";
+			};
+			name = Debug;
+		};
+		72EB3D111AC2E4D6004F32E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "lemon-oa-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = LemoniOS;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LemoniOS.app/LemoniOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72EB3CE81AC2E4D6004F32E5 /* Build configuration list for PBXProject "LemoniOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72EB3D0A1AC2E4D6004F32E5 /* Debug */,
+				72EB3D0B1AC2E4D6004F32E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72EB3D0C1AC2E4D6004F32E5 /* Build configuration list for PBXNativeTarget "LemoniOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72EB3D0D1AC2E4D6004F32E5 /* Debug */,
+				72EB3D0E1AC2E4D6004F32E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72EB3D0F1AC2E4D6004F32E5 /* Build configuration list for PBXNativeTarget "LemoniOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72EB3D101AC2E4D6004F32E5 /* Debug */,
+				72EB3D111AC2E4D6004F32E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72EB3CE51AC2E4D6004F32E5 /* Project object */;
+}
