@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		723C46121D294407008B1A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723C46111D294407008B1A6B /* LaunchScreen.storyboard */; };
 		723C46141D2944E3008B1A6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723C46131D2944E3008B1A6B /* Main.storyboard */; };
+		7273597E1D2953CC003F7901 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7273597D1D2953CC003F7901 /* .gitignore */; };
 		72A37AAF1C0EA2AA0098CD18 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37A9D1C0EA2AA0098CD18 /* ContactsViewController.swift */; };
 		72A37AB11C0EA2AA0098CD18 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37AA31C0EA2AA0098CD18 /* TabBarViewController.swift */; };
 		72A37AB21C0EA2AA0098CD18 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37AA61C0EA2AA0098CD18 /* ProfileViewController.swift */; };
@@ -17,7 +18,6 @@
 		72A37ABA1C0EA3040098CD18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A37AB91C0EA3040098CD18 /* AppDelegate.swift */; };
 		72A37ABF1C0EA36B0098CD18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72A37ABC1C0EA36B0098CD18 /* Info.plist */; };
 		72CDFCF21D294B3F00845554 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 72CDFCF01D294B3F00845554 /* LICENSE */; };
-		72CDFCF31D294B3F00845554 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 72CDFCF11D294B3F00845554 /* README.md */; };
 		72CDFCF51D294C3200845554 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CDFCF41D294C3200845554 /* NavigationController.swift */; };
 		72CDFCF71D294C9F00845554 /* Sessions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CDFCF61D294C9F00845554 /* Sessions.storyboard */; };
 		72CDFCF91D294CB300845554 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CDFCF81D294CB300845554 /* Contacts.storyboard */; };
@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		723C46111D294407008B1A6B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		723C46131D2944E3008B1A6B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7273597D1D2953CC003F7901 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		72A37A9D1C0EA2AA0098CD18 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		72A37AA31C0EA2AA0098CD18 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ViewControllers/TabBarViewController.swift; sourceTree = "<group>"; };
 		72A37AA61C0EA2AA0098CD18 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +204,7 @@
 				72EB3CEF1AC2E4D6004F32E5 /* LemoniOS */,
 				72EB3D051AC2E4D6004F32E5 /* LemoniOSTests */,
 				72EB3CEE1AC2E4D6004F32E5 /* Products */,
+				7273597D1D2953CC003F7901 /* .gitignore */,
 				72CDFCF01D294B3F00845554 /* LICENSE */,
 				72CDFCF11D294B3F00845554 /* README.md */,
 			);
@@ -327,6 +329,7 @@
 				72A37AB51C0EA2AA0098CD18 /* Images.xcassets in Resources */,
 				723C46141D2944E3008B1A6B /* Main.storyboard in Resources */,
 				72CDFCF91D294CB300845554 /* Contacts.storyboard in Resources */,
+				7273597E1D2953CC003F7901 /* .gitignore in Resources */,
 				72CDFCF71D294C9F00845554 /* Sessions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +354,6 @@
 				72CDFD031D29510400845554 /* SessionsCell.swift in Sources */,
 				72A37AB11C0EA2AA0098CD18 /* TabBarViewController.swift in Sources */,
 				72CDFD011D29506C00845554 /* Session.swift in Sources */,
-				72CDFCF31D294B3F00845554 /* README.md in Sources */,
 				72A37ABA1C0EA3040098CD18 /* AppDelegate.swift in Sources */,
 				72A37AB21C0EA2AA0098CD18 /* ProfileViewController.swift in Sources */,
 			);
