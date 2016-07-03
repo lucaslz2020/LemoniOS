@@ -1,5 +1,5 @@
 //
-//  DiscoverViewController.swift
+//  ProfileViewController.swift
 //  lemon-oa-ios
 //
 //  Created by lucas on 15/3/25.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiscoverViewController: UIViewController {
+class MeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

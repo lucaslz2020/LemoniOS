@@ -1,5 +1,5 @@
 //
-//  MessagesViewController.swift
+//  SessionsViewController.swift
 //  lemon-oa-ios
 //
 //  Created by lucas on 15/3/25.

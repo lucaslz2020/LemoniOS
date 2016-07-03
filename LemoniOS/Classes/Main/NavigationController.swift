@@ -1,14 +1,14 @@
 //
-//  MeViewController.swift
-//  lemon-oa-ios
+//  NavigationController.swift
+//  LemoniOS
 //
-//  Created by lucas on 15/3/25.
-//  Copyright (c) 2015年 三只小猪. All rights reserved.
+//  Created by lucas on 16/7/3.
+//  Copyright © 2016年 三只小猪. All rights reserved.
 //
 
 import UIKit
 
-class MeViewController: UIViewController {
+class NavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class MeViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
