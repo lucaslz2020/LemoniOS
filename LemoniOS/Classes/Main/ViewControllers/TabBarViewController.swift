@@ -22,7 +22,7 @@ class TabBarViewController: UITabBarController {
         self.initChildViewController(MeViewController(), title: "我", imageName: "", selectedImageName: "")
     }
     
-    func initChildViewController(viewController:UIViewController,title:String, imageName: String, selectedImageName:String) {
+    func initChildViewController(_ viewController:UIViewController,title:String, imageName: String, selectedImageName:String) {
         viewController.title = title;
         viewController.tabBarItem.image = UIImage(named:imageName)
         viewController.tabBarItem.selectedImage = UIImage(named: selectedImageName)
