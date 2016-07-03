@@ -12,10 +12,16 @@ class Session: NSObject {
 
     var avatarURLString: String?
     
-    var name: String?
+    var name: String
     
-    var content: String?
+    var content: String
     
-    var createdTime: TimeInterval?
+    var createdTime: TimeInterval
  
+    init(name: String, content: String) {
+        self.name = name
+        self.content = content
+        self.createdTime = Date().timeIntervalSince1970
+        super.init()
+    }
 }
