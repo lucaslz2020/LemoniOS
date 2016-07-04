@@ -6,7 +6,7 @@
 //  Copyright © 2016年 三只小猪. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class Session: NSObject {
 

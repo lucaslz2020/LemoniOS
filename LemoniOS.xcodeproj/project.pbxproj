@@ -24,6 +24,7 @@
 		72CDFCFB1D294CC400845554 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CDFCFA1D294CC400845554 /* Profile.storyboard */; };
 		72CDFD011D29506C00845554 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CDFD001D29506C00845554 /* Session.swift */; };
 		72CDFD031D29510400845554 /* SessionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CDFD021D29510400845554 /* SessionsCell.swift */; };
+		72D17E231D2A933C00F2B727 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D17E221D2A933C00F2B727 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		72CDFCFA1D294CC400845554 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		72CDFD001D29506C00845554 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		72CDFD021D29510400845554 /* SessionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsCell.swift; sourceTree = "<group>"; };
+		72D17E221D2A933C00F2B727 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		72EB3CED1AC2E4D6004F32E5 /* LemoniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemoniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EB3D021AC2E4D6004F32E5 /* LemoniOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemoniOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 		72A37A9B1C0EA2AA0098CD18 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				72D17E211D2A932800F2B727 /* Models */,
 				72A37A9C1C0EA2AA0098CD18 /* ViewControllers */,
 			);
 			path = Contacts;
@@ -196,6 +199,14 @@
 				72CDFD021D29510400845554 /* SessionsCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		72D17E211D2A932800F2B727 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72D17E221D2A933C00F2B727 /* Contact.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		72EB3CE41AC2E4D6004F32E5 = {
@@ -348,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D17E231D2A933C00F2B727 /* Contact.swift in Sources */,
 				72A37AB31C0EA2AA0098CD18 /* SessionsViewController.swift in Sources */,
 				72CDFCF51D294C3200845554 /* NavigationController.swift in Sources */,
 				72A37AAF1C0EA2AA0098CD18 /* ContactsViewController.swift in Sources */,
