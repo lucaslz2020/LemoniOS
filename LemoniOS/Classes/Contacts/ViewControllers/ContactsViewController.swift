@@ -47,7 +47,7 @@ extension ContactsViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let contact = self.contacts[indexPath.row]
-        cell.imageView?.image = UIImage(named: "avatar_default")?.withRenderingMode(.automatic)
+        cell.imageView?.image = UIImage(named: "avatar_default")
         cell.textLabel?.text = contact.name
     }
     
