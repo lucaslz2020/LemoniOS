@@ -9,23 +9,13 @@
         <scene sceneID="VMC-Ih-Ife">
             <objects>
                 <tableViewController id="jFN-Ly-1uS" customClass="ProfileViewController" customModule="LemoniOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="pBm-q5-Rrx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pBm-q5-Rrx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="qlf-v2-BoY">
-                            <frame key="frameInset" minY="64" width="375" height="128"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="rect" keyPath="frame">
-                                    <rect key="value" x="0.0" y="0.0" width="0.0" height="0.10000000000000001"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProfileCell" textLabel="P6A-h1-8mO" style="IBUITableViewCellStyleDefault" id="AKS-Vq-cp6">
-                                <frame key="frameInset" minY="248" width="375" height="44"/>
+                                <frame key="frameInset" minY="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AKS-Vq-cp6" id="Es6-xQ-lG7">
                                     <frame key="frameInset" width="342" height="43.5"/>
@@ -35,7 +25,7 @@
                                             <frame key="frameInset" minX="15" width="325" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

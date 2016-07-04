@@ -28,7 +28,7 @@
         <scene sceneID="fsh-eg-DVd">
             <objects>
                 <navigationController id="3mb-lz-DTN" customClass="NavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sessions" id="fJa-HM-3Ol"/>
+                    <tabBarItem key="tabBarItem" title="Sessions" image="tab_sessions" selectedImage="tab_sessions_selected" id="fJa-HM-3Ol"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8z2-3q-R01">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -45,7 +45,7 @@
         <scene sceneID="VhU-R4-HFG">
             <objects>
                 <navigationController id="tYC-dX-3tc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contacts" id="RD3-KD-MBr"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="tab_contacts" selectedImage="tab_contacts_selected" id="RD3-KD-MBr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qjg-KF-0cc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -62,7 +62,7 @@
         <scene sceneID="Qhq-yZ-NAj">
             <objects>
                 <navigationController id="Jon-ba-fL1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="naX-XJ-bgH"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tab_profile" selectedImage="tab_profile_selected" id="naX-XJ-bgH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EK0-rT-5Bh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -106,4 +106,12 @@
             <point key="canvasLocation" x="-438" y="1289"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_contacts" width="26" height="26"/>
+        <image name="tab_contacts_selected" width="26" height="26"/>
+        <image name="tab_profile" width="26" height="26"/>
+        <image name="tab_profile_selected" width="26" height="26"/>
+        <image name="tab_sessions" width="26" height="26"/>
+        <image name="tab_sessions_selected" width="26" height="26"/>
+    </resources>
 </document>
