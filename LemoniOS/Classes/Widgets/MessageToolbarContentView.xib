@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MessageToolbarContentView" customModule="LemoniOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMv-lc-CpT" userLabel="Left container">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="Brn-GJ-Ecy"/>
+                        <constraint firstAttribute="height" constant="32" id="lZc-h8-uM0"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LN3-ab-dbd" userLabel="Right container">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="i8L-iu-TvI"/>
+                        <constraint firstAttribute="width" constant="50" id="wlQ-RE-Rnn"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GXv-UT-ZYy" customClass="MessageComposerTextView" customModule="LemoniOS" customModuleProvider="target">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="ROF-sc-fuu"/>
+                        <constraint firstAttribute="height" constant="30" id="TSO-H6-jHb"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="gFy-Gp-0TA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LN3-ab-dbd" secondAttribute="trailing" constant="8" id="7rh-l4-vyd"/>
+                <constraint firstItem="GXv-UT-ZYy" firstAttribute="leading" secondItem="UMv-lc-CpT" secondAttribute="trailing" constant="8" id="Dfx-k6-Iex"/>
+                <constraint firstAttribute="bottom" secondItem="LN3-ab-dbd" secondAttribute="bottom" constant="6" id="LZb-9r-cZr"/>
+                <constraint firstItem="UMv-lc-CpT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="TZg-ER-u0c"/>
+                <constraint firstAttribute="bottom" secondItem="GXv-UT-ZYy" secondAttribute="bottom" constant="7" id="YUf-q2-0xX"/>
+                <constraint firstItem="LN3-ab-dbd" firstAttribute="leading" secondItem="GXv-UT-ZYy" secondAttribute="trailing" constant="8" id="iOM-d3-ihV"/>
+                <constraint firstItem="GXv-UT-ZYy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="oSt-p6-bDv"/>
+                <constraint firstAttribute="bottom" secondItem="UMv-lc-CpT" secondAttribute="bottom" constant="6" id="ohH-ps-Bta"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftBarButtonContainerView" destination="UMv-lc-CpT" id="Sn0-mX-vXV"/>
+                <outlet property="leftBarButtonContainerViewWidthConstraint" destination="Brn-GJ-Ecy" id="qSt-8U-JjT"/>
+                <outlet property="leftHorizontalSpacingConstraint" destination="TZg-ER-u0c" id="Ma3-af-BnY"/>
+                <outlet property="rightBarButtonContainerView" destination="LN3-ab-dbd" id="eCY-tQ-QKJ"/>
+                <outlet property="rightBarButtonContainerViewWidthConstraint" destination="wlQ-RE-Rnn" id="k0O-t4-baL"/>
+                <outlet property="rightHorizontalSpacingConstraint" destination="7rh-l4-vyd" id="kP1-PE-TG4"/>
+                <outlet property="textView" destination="GXv-UT-ZYy" id="cWC-7s-6Yr"/>
+            </connections>
+            <point key="canvasLocation" x="331.5" y="-222.5"/>
+        </view>
+    </objects>
+</document>
