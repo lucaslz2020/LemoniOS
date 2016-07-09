@@ -34,8 +34,8 @@ class MessageInputToolBar: UIToolbar {
         return result
     }()
     
-    lazy var sendButton: UIButton = {
-        let sendTitle = "send"
+    private lazy var sendButton: UIButton = {
+        let sendTitle = "发送"
         let result = UIButton(type: .custom)
         result.setTitle(sendTitle, for: [])
         result.setTitleColor(MessageInputToolBarUX.sendButtonNormalTitleColor, for: [])
@@ -67,10 +67,15 @@ class MessageInputToolBar: UIToolbar {
         
         self.contentView.leftBarButtonItem = nil
         self.contentView.rightBarButtonItem = self.sendButton
+        
+        toggleSendButtonEnabled()
     }
     
     private func setupContentViewConstraints() {
         self.lz_pinAllEdgesOfSubView(subView: self.contentView)
     }
     
+    private func toggleSendButtonEnabled() {
+        self.contentView.rightBarButtonItem?.isEnabled = self.contentView.textView.hasText()
+    }
 }
