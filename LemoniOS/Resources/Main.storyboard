@@ -27,7 +27,7 @@
         <!--Sessions-->
         <scene sceneID="fsh-eg-DVd">
             <objects>
-                <navigationController id="3mb-lz-DTN" customClass="NavigationController" sceneMemberID="viewController">
+                <navigationController id="3mb-lz-DTN" customClass="NavigationController" customModule="LemoniOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sessions" image="tab_sessions" selectedImage="tab_sessions_selected" id="fJa-HM-3Ol"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8z2-3q-R01">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -44,7 +44,7 @@
         <!--Contacts-->
         <scene sceneID="VhU-R4-HFG">
             <objects>
-                <navigationController id="tYC-dX-3tc" sceneMemberID="viewController">
+                <navigationController id="tYC-dX-3tc" customClass="NavigationController" customModule="LemoniOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contacts" image="tab_contacts" selectedImage="tab_contacts_selected" id="RD3-KD-MBr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qjg-KF-0cc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -61,7 +61,7 @@
         <!--Profile-->
         <scene sceneID="Qhq-yZ-NAj">
             <objects>
-                <navigationController id="Jon-ba-fL1" sceneMemberID="viewController">
+                <navigationController id="Jon-ba-fL1" customClass="NavigationController" customModule="LemoniOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="tab_profile" selectedImage="tab_profile_selected" id="naX-XJ-bgH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EK0-rT-5Bh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

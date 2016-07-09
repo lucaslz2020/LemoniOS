@@ -63,6 +63,7 @@
                                     <outlet property="contentLabel" destination="HCv-sS-OhC" id="mjh-4g-jge"/>
                                     <outlet property="nameLabel" destination="rJ9-FN-RN7" id="MKc-Fv-QHv"/>
                                     <outlet property="timeLabel" destination="NQ4-bm-0Zb" id="uVf-KN-Y5v"/>
+                                    <segue destination="Gee-DX-1Qt" kind="show" id="fuJ-WH-5nZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,6 +79,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBs-bg-V7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324" y="-213.64317841079463"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="Qlb-PY-jAz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="Gee-DX-1Qt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNm-cI-lXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="-214"/>
         </scene>
     </scenes>
     <resources>

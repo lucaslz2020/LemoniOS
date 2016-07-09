@@ -33,7 +33,7 @@ class SessionsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         setupViews()
     }
     
