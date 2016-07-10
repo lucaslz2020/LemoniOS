@@ -8,84 +8,97 @@
 
 import UIKit
 
-class ChatViewController: UITableViewController {
+class ChatViewController: UIViewController {
 
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var inputToolbar: MessageInputToolBar!
+    @IBOutlet weak var toolbarBottomLayoutGuide: NSLayoutConstraint!
+    
+    deinit {
+        removeNotification()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hidesBottomBarWhenPushed = true
+        removeInputToolbar()
+        
+        addNotification()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+// MARK: - InputToolbar
+
+/**
+ 
+    使用inputAccessoryView
+    
+    分三步：
+        重写inputAccessoryView 提供自定义的view。这里是inputToolbar
+        必须能够成为第一响应者。即重写canBecomeFirstResponder， 不然inputToolbar不显示。
+        inputToolbar不能在其他的视图中，所以要从其他的视图中移除。 不然会直接报错。
+ */
+extension ChatViewController {
+    
+    override var inputAccessoryView: UIView? {
+        return self.inputToolbar
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    private func removeInputToolbar() {
+        self.inputToolbar.removeFromSuperview()
+    }
+}
+
+// MARK: - Private methods
+
+private extension ChatViewController {
+    
+    private func addNotification() {
+        NotificationCenter.default().addObserver(self, selector: #selector(ChatViewController.didReceiveKeyboardWillChangeFromNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    private func removeNotification() {
+        NotificationCenter.default().removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    @objc private func didReceiveKeyboardWillChangeFromNotification(notification: Notification) {
+        guard let userInfo = notification.userInfo else {
+            return
+        }
+        guard let keyboardEndFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect
+        where keyboardEndFrame.equalTo(CGRect.zero)  else {
+            return
+        }
+        
+        let animationDuration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval) ?? 3.0
+        
+        let animationCurve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int ?? 0
+        let animationCurveOption = UIViewAnimationOptions(rawValue: UInt(animationCurve << 16))
+        
+        UIView.animate(withDuration: animationDuration, delay: 0.0, options: [animationCurveOption], animations: {
+            
+        }, completion: nil)
+    }
+}
+
+// MARK: - UITableViewDataSource
+//
+//extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
+//    
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
+//}

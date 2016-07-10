@@ -55,7 +55,7 @@ class MessageInputToolBar: UIToolbar {
         result.frame = CGRect(x: 0.0, y: 0.0, width: sendTitleRect.integral.width, height: maxHeight)
         return result
     }()
-    
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
         
