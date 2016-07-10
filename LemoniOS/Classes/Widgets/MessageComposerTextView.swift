@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: MessageComposerTextViewUX
+
 struct MessageComposerTextViewUX {
     
     static let backgroundColor = UIColor.white()
@@ -18,20 +20,50 @@ struct MessageComposerTextViewUX {
     static let textColor = UIColor.black()
 }
 
+// MARK: MessageComposerTextView
+
 class MessageComposerTextView: UITextView {
+    
+    private weak var heightConstraint: NSLayoutConstraint?
+    
+    private weak var minHeightConstraint: NSLayoutConstraint?
+    
+    private weak var maxHeightConstraint: NSLayoutConstraint?
+    
+    deinit {
+        removeNotification()
+    }
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         setupViews()
+        setupConstraints()
+        addNotifications()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupViews()
+        setupConstraints()
+        addNotifications()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        var height = self.sizeThatFits(self.frame.size).height
+        
+        if let maxHeightConstraint = self.maxHeightConstraint {
+            height = min(height, maxHeightConstraint.constant)
+        }
+        if let minHeightConstraint = self.minHeightConstraint {
+            height = max(height, minHeightConstraint.constant)
+        }
+        self.heightConstraint?.constant = height
     }
 }
 
-// MARK: - Private methods
+// MARK: Private methods
 
 private extension MessageComposerTextView {
     
@@ -46,5 +78,58 @@ private extension MessageComposerTextView {
         self.font = MessageComposerTextViewUX.font
         self.textColor = MessageComposerTextViewUX.textColor
         self.textAlignment = .natural
+        
+        self.textContainerInset = UIEdgeInsets(top: 4.0, left: 2.0, bottom: 4.0, right: 2.0)
+        self.contentInset = UIEdgeInsets(top: 1.0, left: 0.0, bottom: 0.0, right: 0.0)
+        self.scrollIndicatorInsets = UIEdgeInsets(top: MessageComposerTextViewUX.cornerRadius, left: 0.0, bottom: MessageComposerTextViewUX.cornerRadius, right: 0.0)
+        
+        self.isScrollEnabled = true
+        self.scrollsToTop = false
+        self.isUserInteractionEnabled = true
+        
+        self.returnKeyType = .default
+        
+        self.text = nil
+    }
+    
+    private func setupConstraints() {
+        self.constraints.forEach { (constraint) in
+            guard constraint.firstAttribute == .height else {
+                return
+            }
+            if constraint.relation == .equal {
+                self.heightConstraint = constraint
+                return
+            }
+            if constraint.relation == .lessThanOrEqual {
+                self.maxHeightConstraint = constraint
+                return
+            }
+            if constraint.relation == .greaterThanOrEqual {
+                self.minHeightConstraint = constraint
+                return
+            }
+        }
+    }
+    
+    private func addNotifications() {
+        NotificationCenter.default().addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default().addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidBeginEditing, object: self)
+        NotificationCenter.default().addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidEndEditing, object: self)
+    }
+    
+    private func removeNotification() {
+        NotificationCenter.default().removeObserver(self, name: Notification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default().removeObserver(self, name: Notification.Name.UITextViewTextDidBeginEditing, object: self)
+        NotificationCenter.default().removeObserver(self, name: Notification.Name.UITextViewTextDidEndEditing, object: self)
+    }
+}
+
+// MARK: Objective-C methods
+
+extension MessageComposerTextView {
+    
+    @objc func didReceiveTextView(WithNotification notification: Notification) {
+        self.setNeedsDisplay()
     }
 }
