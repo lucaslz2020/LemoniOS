@@ -14,6 +14,8 @@ struct MessageComposerTextViewUX {
     static let borderWidth: CGFloat = 0.5
     static let borderColor = UIColor.lightGray().cgColor
     static let cornerRadius: CGFloat = 6.0
+    static let font = UIFont.systemFont(ofSize: 16.0)
+    static let textColor = UIColor.black()
 }
 
 class MessageComposerTextView: UITextView {
@@ -39,6 +41,10 @@ private extension MessageComposerTextView {
         self.backgroundColor = MessageComposerTextViewUX.backgroundColor
         self.layer.borderWidth = MessageComposerTextViewUX.borderWidth
         self.layer.borderColor = MessageComposerTextViewUX.borderColor
-        self.layer.cornerRadius = MessageComposerTextViewUX.cornerRadius        
+        self.layer.cornerRadius = MessageComposerTextViewUX.cornerRadius
+        
+        self.font = MessageComposerTextViewUX.font
+        self.textColor = MessageComposerTextViewUX.textColor
+        self.textAlignment = .natural
     }
 }
