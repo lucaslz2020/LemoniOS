@@ -61,6 +61,15 @@ class MessageComposerTextView: UITextView {
         }
         self.heightConstraint?.constant = height
     }
+    
+    override var bounds: CGRect {
+        
+        didSet {
+            if self.contentSize.height <= bounds.size.height + 1 {
+                self.contentOffset = CGPoint.zero
+            }
+        }
+    }
 }
 
 // MARK: Private methods
