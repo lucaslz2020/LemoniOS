@@ -28,7 +28,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GXv-UT-ZYy" customClass="MessageComposerTextView" customModule="LemoniOS" customModuleProvider="target">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="ROF-sc-fuu"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="91" id="ROF-sc-fuu"/>
                         <constraint firstAttribute="height" constant="30" id="TSO-H6-jHb"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="gFy-Gp-0TA"/>
                     </constraints>
