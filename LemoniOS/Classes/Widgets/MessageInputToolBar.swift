@@ -28,8 +28,8 @@ class MessageInputToolBar: UIToolbar {
     var maximumHeight: Int = NSNotFound
     
     private lazy var contentView: MessageToolbarContentView = {
-        var result = Bundle.main()
-                        .loadNibNamed(String(MessageToolbarContentView), owner: nil, options: nil)
+        var result = Bundle.main
+                        .loadNibNamed(String(MessageToolbarContentView.self), owner: nil, options: nil)
                         .first as! MessageToolbarContentView
         return result
     }()

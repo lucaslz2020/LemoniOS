@@ -61,11 +61,11 @@ extension ChatViewController {
 private extension ChatViewController {
     
     private func addNotification() {
-        NotificationCenter.default().addObserver(self, selector: #selector(ChatViewController.didReceiveKeyboardWillChangeFromNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.didReceiveKeyboardWillChangeFromNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
     private func removeNotification() {
-        NotificationCenter.default().removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
     @objc private func didReceiveKeyboardWillChangeFromNotification(notification: Notification) {

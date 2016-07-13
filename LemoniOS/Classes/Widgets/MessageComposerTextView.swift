@@ -122,15 +122,15 @@ private extension MessageComposerTextView {
     }
     
     private func addNotifications() {
-        NotificationCenter.default().addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidChange, object: self)
-        NotificationCenter.default().addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidBeginEditing, object: self)
-        NotificationCenter.default().addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidEndEditing, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidBeginEditing, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidEndEditing, object: self)
     }
     
     private func removeNotification() {
-        NotificationCenter.default().removeObserver(self, name: Notification.Name.UITextViewTextDidChange, object: self)
-        NotificationCenter.default().removeObserver(self, name: Notification.Name.UITextViewTextDidBeginEditing, object: self)
-        NotificationCenter.default().removeObserver(self, name: Notification.Name.UITextViewTextDidEndEditing, object: self)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UITextViewTextDidBeginEditing, object: self)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UITextViewTextDidEndEditing, object: self)
     }
 }
 
