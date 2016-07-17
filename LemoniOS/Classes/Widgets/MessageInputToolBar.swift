@@ -29,7 +29,7 @@ class MessageInputToolBar: UIToolbar {
     
     private lazy var contentView: MessageToolbarContentView = {
         var result = Bundle.main
-                        .loadNibNamed(NSStringFromClass(MessageToolbarContentView.self), owner: nil, options: nil)
+                        .loadNibNamed(String(MessageToolbarContentView.self), owner: nil, options: nil)
                         .first as! MessageToolbarContentView
         return result
     }()
