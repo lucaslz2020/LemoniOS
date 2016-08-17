@@ -67,7 +67,7 @@ extension SessionsViewController {
         }
         
         guard let navigationController = navigationController
-            where navigationController.topViewController == self else {
+            , navigationController.topViewController == self else {
             return
         }
         // do something.

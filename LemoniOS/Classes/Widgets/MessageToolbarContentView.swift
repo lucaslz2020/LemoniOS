@@ -131,7 +131,7 @@ class MessageToolbarContentView: UIView {
     }
     
     class func nib() -> UINib {
-        return UINib(nibName: String(self), bundle: nil)
+        return UINib(nibName: NSStringFromClass(self), bundle: nil)
     }
     
     override func awakeFromNib() {
@@ -140,7 +140,7 @@ class MessageToolbarContentView: UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.setupConstraints()
-        self.backgroundColor = UIColor.clear()
+        self.backgroundColor = UIColor.clear
 
     }
 

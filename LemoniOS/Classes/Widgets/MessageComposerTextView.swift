@@ -12,23 +12,23 @@ import UIKit
 
 struct MessageComposerTextViewUX {
     
-    static let backgroundColor = UIColor.white()
+    static let backgroundColor = UIColor.white
     static let borderWidth: CGFloat = 0.5
-    static let borderColor = UIColor.lightGray().cgColor
+    static let borderColor = UIColor.lightGray.cgColor
     static let cornerRadius: CGFloat = 6.0
     static let font = UIFont.systemFont(ofSize: 16.0)
-    static let textColor = UIColor.black()
+    static let textColor = UIColor.black
 }
 
 // MARK: MessageComposerTextView
 
 class MessageComposerTextView: UITextView {
     
-    private weak var heightConstraint: NSLayoutConstraint?
+    weak var heightConstraint: NSLayoutConstraint?
     
-    private weak var minHeightConstraint: NSLayoutConstraint?
+    weak var minHeightConstraint: NSLayoutConstraint?
     
-    private weak var maxHeightConstraint: NSLayoutConstraint?
+    weak var maxHeightConstraint: NSLayoutConstraint?
     
     deinit {
         removeNotification()
@@ -74,9 +74,9 @@ class MessageComposerTextView: UITextView {
 
 // MARK: Private methods
 
-private extension MessageComposerTextView {
+extension MessageComposerTextView {
     
-    private func setupViews() {
+    func setupViews() {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.backgroundColor = MessageComposerTextViewUX.backgroundColor
@@ -101,7 +101,7 @@ private extension MessageComposerTextView {
         self.text = nil
     }
     
-    private func setupConstraints() {
+    func setupConstraints() {
         self.constraints.forEach { (constraint) in
             guard constraint.firstAttribute == .height else {
                 return
@@ -121,13 +121,13 @@ private extension MessageComposerTextView {
         }
     }
     
-    private func addNotifications() {
+    func addNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidChange, object: self)
         NotificationCenter.default.addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidBeginEditing, object: self)
         NotificationCenter.default.addObserver(self, selector: #selector(MessageComposerTextView.didReceiveTextView(WithNotification:)), name: Notification.Name.UITextViewTextDidEndEditing, object: self)
     }
     
-    private func removeNotification() {
+    func removeNotification() {
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UITextViewTextDidChange, object: self)
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UITextViewTextDidBeginEditing, object: self)
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UITextViewTextDidEndEditing, object: self)

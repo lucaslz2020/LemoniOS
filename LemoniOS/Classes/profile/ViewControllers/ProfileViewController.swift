@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UITableViewController {
 
-    private static let cellIdentifier = "ProfileCell"
+    static let cellIdentifier = "ProfileCell"
     
     lazy var profileItems: [ProfileItem] = {
         var results = [ProfileItem]()
@@ -61,7 +61,7 @@ extension ProfileViewController {
             tableView .deselectRow(at: indexPath, animated: true)
         }
         guard let navigationController = navigationController
-            where navigationController.topViewController == self else {
+            , navigationController.topViewController == self else {
                 return
         }
         // dosomething.

@@ -11,7 +11,7 @@ import UIKit
 class ChatViewController: UIViewController {
 
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: MessagesCollectionView!
     
     @IBOutlet weak var inputToolbar: MessageInputToolBar!
     @IBOutlet weak var toolbarBottomLayoutGuide: NSLayoutConstraint!
@@ -23,11 +23,44 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         removeInputToolbar()
-        
         addNotification()
+        
+        setupViews()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+
+    }
+}
+
+extension ChatViewController {
+    
+    func setupViews() {
+        
+        self.view.backgroundColor = UIColor.white
+        
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+    }
+}
+
+extension ChatViewController: UICollectionViewDataSource {
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+        
+}
+
+extension ChatViewController: UICollectionViewDelegate {
+    
 }
 
 // MARK: - InputToolbar
@@ -47,33 +80,33 @@ extension ChatViewController {
         return self.inputToolbar
     }
     
-    override func canBecomeFirstResponder() -> Bool {
+    override var canBecomeFirstResponder: Bool {
         return true
     }
     
-    private func removeInputToolbar() {
+    func removeInputToolbar() {
         self.inputToolbar.removeFromSuperview()
     }
 }
 
-// MARK: - Private methods
+// MARK: - Notifications
 
-private extension ChatViewController {
+extension ChatViewController {
     
-    private func addNotification() {
+    func addNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.didReceiveKeyboardWillChangeFromNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
-    private func removeNotification() {
+    func removeNotification() {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
-    @objc private func didReceiveKeyboardWillChangeFromNotification(notification: Notification) {
+    @objc func didReceiveKeyboardWillChangeFromNotification(notification: Notification) {
         guard let userInfo = notification.userInfo else {
             return
         }
         guard let keyboardEndFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect
-        where keyboardEndFrame.equalTo(CGRect.zero)  else {
+        , keyboardEndFrame.equalTo(CGRect.zero)  else {
             return
         }
         

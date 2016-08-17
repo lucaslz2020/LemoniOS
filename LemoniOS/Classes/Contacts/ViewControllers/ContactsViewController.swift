@@ -10,7 +10,7 @@ import UIKit
 
 class ContactsViewController: UITableViewController {
 
-    static let cellIdentifier = "ContactCell"
+    open static let cellIdentifier = "ContactCell"
     
     lazy var contacts: [Contact] = {
         var results = [Contact]()
@@ -60,7 +60,7 @@ extension ContactsViewController {
             tableView .deselectRow(at: indexPath, animated: true)
         }
         guard let navigationController = navigationController
-            where navigationController.topViewController == self else {
+            , navigationController.topViewController == self else {
             return
         }
         // dosomething.

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MessagesFromCollectionViewCell" customModule="LemoniOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jur-xE-zZh" customClass="MessagesLabel" customModule="LemoniOS" customModuleProvider="target">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="uw6-29-9IN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiL-ti-AZQ" customClass="MessagesLabel" customModule="LemoniOS" customModuleProvider="target">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="b1q-r2-tN2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SE9-eK-xGK">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fdg-3E-4mX"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fdg-3E-4mX" secondAttribute="trailing" id="1nX-fM-NSR"/>
+                            <constraint firstAttribute="width" constant="34" id="6Mm-Oq-IRB"/>
+                            <constraint firstAttribute="bottom" secondItem="Fdg-3E-4mX" secondAttribute="bottom" id="qa0-b6-F2c"/>
+                            <constraint firstItem="Fdg-3E-4mX" firstAttribute="top" secondItem="SE9-eK-xGK" secondAttribute="top" id="qeT-8F-xOr"/>
+                            <constraint firstItem="Fdg-3E-4mX" firstAttribute="leading" secondItem="SE9-eK-xGK" secondAttribute="leading" id="vut-Pn-r1G"/>
+                            <constraint firstAttribute="height" constant="34" id="y9k-ap-c0f"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSK-Gv-goV">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dsn-04-pBS"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xJw-Jo-7dH" customClass="MessagesCellTextView" customModule="LemoniOS" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dsn-04-pBS" firstAttribute="leading" secondItem="VSK-Gv-goV" secondAttribute="leading" id="1bh-dF-AvT"/>
+                            <constraint firstAttribute="bottom" secondItem="dsn-04-pBS" secondAttribute="bottom" id="1zO-hA-jFb"/>
+                            <constraint firstAttribute="trailing" secondItem="xJw-Jo-7dH" secondAttribute="trailing" id="45b-ez-fJh"/>
+                            <constraint firstItem="dsn-04-pBS" firstAttribute="top" secondItem="VSK-Gv-goV" secondAttribute="top" id="5Bu-Kk-65Z"/>
+                            <constraint firstAttribute="width" constant="200" id="7Uz-i7-8Nm"/>
+                            <constraint firstItem="xJw-Jo-7dH" firstAttribute="top" secondItem="VSK-Gv-goV" secondAttribute="top" id="Fi0-Rh-9bS"/>
+                            <constraint firstAttribute="bottom" secondItem="xJw-Jo-7dH" secondAttribute="bottom" id="Hop-ek-ugo"/>
+                            <constraint firstAttribute="trailing" secondItem="dsn-04-pBS" secondAttribute="trailing" id="Iwr-rO-08f"/>
+                            <constraint firstItem="xJw-Jo-7dH" firstAttribute="leading" secondItem="VSK-Gv-goV" secondAttribute="leading" constant="6" id="PI0-uF-Up8"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzn-ui-qx5" customClass="MessagesLabel" customModule="LemoniOS" customModuleProvider="target">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="bs1-hE-fpY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="VSK-Gv-goV" firstAttribute="leading" secondItem="Fdg-3E-4mX" secondAttribute="trailing" constant="2" id="30D-BP-ads"/>
+                <constraint firstItem="SE9-eK-xGK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DEe-50-hPM"/>
+                <constraint firstItem="jur-xE-zZh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SuZ-S1-FDF"/>
+                <constraint firstItem="jur-xE-zZh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ydw-2p-n2j"/>
+                <constraint firstAttribute="trailing" secondItem="NiL-ti-AZQ" secondAttribute="trailing" id="eTK-UR-yEC"/>
+                <constraint firstItem="NiL-ti-AZQ" firstAttribute="top" secondItem="jur-xE-zZh" secondAttribute="bottom" id="hay-bQ-b7Z"/>
+                <constraint firstItem="VSK-Gv-goV" firstAttribute="top" secondItem="NiL-ti-AZQ" secondAttribute="bottom" id="mhd-C3-dMc"/>
+                <constraint firstItem="NiL-ti-AZQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nPP-tz-uK3"/>
+                <constraint firstItem="nzn-ui-qx5" firstAttribute="top" secondItem="SE9-eK-xGK" secondAttribute="bottom" id="qHk-Xi-gyP"/>
+                <constraint firstItem="nzn-ui-qx5" firstAttribute="top" secondItem="VSK-Gv-goV" secondAttribute="bottom" id="qZn-vH-oEt"/>
+                <constraint firstAttribute="trailing" secondItem="nzn-ui-qx5" secondAttribute="trailing" id="rOp-5M-szF"/>
+                <constraint firstAttribute="bottom" secondItem="nzn-ui-qx5" secondAttribute="bottom" id="t52-Jm-JPp"/>
+                <constraint firstItem="nzn-ui-qx5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tCi-Ns-UiN"/>
+                <constraint firstAttribute="trailing" secondItem="jur-xE-zZh" secondAttribute="trailing" id="xeQ-YS-nQV"/>
+            </constraints>
+            <size key="customSize" width="325" height="187"/>
+            <connections>
+                <outlet property="avatarContainerView" destination="SE9-eK-xGK" id="3Uy-L8-XHk"/>
+                <outlet property="avatarContainerViewHeightConstraint" destination="y9k-ap-c0f" id="pVR-nf-cbJ"/>
+                <outlet property="avatarContainerViewWidthConstraint" destination="6Mm-Oq-IRB" id="Mb5-vI-R0T"/>
+                <outlet property="avatarImageView" destination="Fdg-3E-4mX" id="zgL-Hp-o0c"/>
+                <outlet property="cellBottomLabel" destination="nzn-ui-qx5" id="yKh-Cg-lCz"/>
+                <outlet property="cellBottomLabelHeightConstraint" destination="bs1-hE-fpY" id="3Bp-KF-PYX"/>
+                <outlet property="cellTopLabel" destination="jur-xE-zZh" id="lZV-28-K2u"/>
+                <outlet property="cellTopLabelHeightConstraint" destination="uw6-29-9IN" id="1w6-RG-usk"/>
+                <outlet property="messageBubbleContainerView" destination="VSK-Gv-goV" id="rhY-up-skx"/>
+                <outlet property="messageBubbleContainerWidthConstraint" destination="7Uz-i7-8Nm" id="IOh-Nz-h26"/>
+                <outlet property="messageBubbleImageView" destination="dsn-04-pBS" id="xya-dk-X0m"/>
+                <outlet property="messageBubbleTopLabel" destination="NiL-ti-AZQ" id="bg0-kQ-4kQ"/>
+                <outlet property="messageBubbleTopLabelHeightConstraint" destination="b1q-r2-tN2" id="OlP-4X-n3h"/>
+                <outlet property="textView" destination="xJw-Jo-7dH" id="wcs-QX-CTS"/>
+                <outlet property="textViewAvatarHorizontalSpaceConstraint" destination="PI0-uF-Up8" id="Obo-Ti-hMd"/>
+                <outlet property="textViewBottomVerticalSpaceConstraint" destination="Hop-ek-ugo" id="1Na-S2-Tnf"/>
+                <outlet property="textViewMarginHorizontalSpaceConstraint" destination="45b-ez-fJh" id="IEz-bk-p9R"/>
+                <outlet property="textViewTopVerticalSpaceConstraint" destination="Fi0-Rh-9bS" id="K6J-qq-1g3"/>
+            </connections>
+            <point key="canvasLocation" x="171" y="122"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -11,7 +11,7 @@ import UIKit
 struct MessageInputToolBarUX {
     static let sendButtonNormalTitleColor = UIColor(hue: 210.0/360, saturation: 0.94, brightness: 1.0, alpha: 1.0)
     static let sendButtonHighlightedTitleColor = UIColor(hue: 210.0/360, saturation: 0.94, brightness: 1.0, alpha: 1.0)
-    static let sendButtonDisabledTitleColor = UIColor.lightGray()
+    static let sendButtonDisabledTitleColor = UIColor.lightGray
     
     static let sendButtonFont = UIFont.boldSystemFont(ofSize: 17)
     static let sendButtonTintColor = sendButtonNormalTitleColor
@@ -29,7 +29,7 @@ class MessageInputToolBar: UIToolbar {
     
     private lazy var contentView: MessageToolbarContentView = {
         var result = Bundle.main
-                        .loadNibNamed(String(MessageToolbarContentView.self), owner: nil, options: nil)
+                        .loadNibNamed((NSStringFromClass(MessageToolbarContentView.self).components(separatedBy: ".").last!), owner: nil, options: nil)?
                         .first as! MessageToolbarContentView
         return result
     }()
@@ -47,7 +47,7 @@ class MessageInputToolBar: UIToolbar {
         result.titleLabel?.minimumScaleFactor = 0.85
         
         result.contentMode = .center
-        result.backgroundColor = UIColor.clear()
+        result.backgroundColor = UIColor.clear
         result.tintColor = MessageInputToolBarUX.sendButtonTintColor
         
         let maxHeight: CGFloat = 32
@@ -59,7 +59,7 @@ class MessageInputToolBar: UIToolbar {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.backgroundColor = UIColor.white()
+        self.backgroundColor = UIColor.white
         
         self.addSubview(self.contentView)
         setupContentViewConstraints()
@@ -76,6 +76,6 @@ class MessageInputToolBar: UIToolbar {
     }
     
     private func toggleSendButtonEnabled() {
-        self.contentView.rightBarButtonItem?.isEnabled = self.contentView.textView.hasText()
+        self.contentView.rightBarButtonItem?.isEnabled = self.contentView.textView.hasText
     }
 }

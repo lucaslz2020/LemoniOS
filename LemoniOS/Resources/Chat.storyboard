@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K5x-SW-7Di">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K5x-SW-7Di">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,9 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vhz-q8-P1N">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gGA-kR-Jax" customClass="MessagesCollectionView" customModule="LemoniOS" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KeW-nP-PRq">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PGe-hC-ErE">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHT-Nr-7Sj" customClass="MessageInputToolBar" customModule="LemoniOS" customModuleProvider="target">
                                 <items/>
                             </toolbar>
@@ -27,17 +42,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eHT-Nr-7Sj" firstAttribute="leading" secondItem="Wbt-DN-ZNH" secondAttribute="leading" id="1tc-ev-hZT"/>
-                            <constraint firstItem="Vhz-q8-P1N" firstAttribute="top" secondItem="Wbt-DN-ZNH" secondAttribute="top" id="2Vv-Nl-H4x"/>
+                            <constraint firstItem="eHT-Nr-7Sj" firstAttribute="top" secondItem="gGA-kR-Jax" secondAttribute="bottom" id="C2k-nN-q70"/>
+                            <constraint firstItem="gGA-kR-Jax" firstAttribute="leading" secondItem="Wbt-DN-ZNH" secondAttribute="leading" id="LVG-tw-FiP"/>
                             <constraint firstAttribute="bottom" secondItem="eHT-Nr-7Sj" secondAttribute="bottom" id="N0i-3N-flf"/>
-                            <constraint firstAttribute="trailing" secondItem="Vhz-q8-P1N" secondAttribute="trailing" id="bL8-47-J53"/>
-                            <constraint firstAttribute="bottom" secondItem="Vhz-q8-P1N" secondAttribute="bottom" id="mjP-oZ-6LF"/>
+                            <constraint firstItem="gGA-kR-Jax" firstAttribute="top" secondItem="Y9J-Jl-wQG" secondAttribute="bottom" id="Tth-6k-Q1S"/>
+                            <constraint firstAttribute="trailing" secondItem="gGA-kR-Jax" secondAttribute="trailing" id="gHG-xp-mIg"/>
                             <constraint firstAttribute="trailing" secondItem="eHT-Nr-7Sj" secondAttribute="trailing" id="sbi-My-qv6"/>
-                            <constraint firstItem="Vhz-q8-P1N" firstAttribute="leading" secondItem="Wbt-DN-ZNH" secondAttribute="leading" id="soz-tm-mfn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="gGA-kR-Jax" id="cEH-gg-LYh"/>
                         <outlet property="inputToolbar" destination="eHT-Nr-7Sj" id="y6K-zZ-cjd"/>
-                        <outlet property="tableView" destination="Vhz-q8-P1N" id="ISK-aO-4PK"/>
                         <outlet property="toolbarBottomLayoutGuide" destination="N0i-3N-flf" id="T7b-oN-mrx"/>
                     </connections>
                 </viewController>
