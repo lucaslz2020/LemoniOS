@@ -2,11 +2,9 @@
 lemon oa iOS
 
 # 环境
-- Version 8.0 beta 6 (8S201h)
+- Version 8.0 (8A218a)
 - Swift 3
     
-    又是一次大变化....
-
 # 目标
 学习...
 
